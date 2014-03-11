@@ -1,0 +1,15 @@
+<form action="/surveys/new" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="text" name="name" placeholder="name"><br>
+	<select name="location" id="">
+		<option value="mv">mountain view</option>
+		<option value="sea">seattle</option>
+	</select><br>
+	<select name="language" id="">
+		<option value="js">js</option>
+		<option value="php">php</option>
+		<option value="ruby">ruby</option>
+	</select><br>
+	<textarea name="comment" id="" cols="30" rows="10" placeholder="comments"></textarea><br>
+	<input type="submit">
+</form>

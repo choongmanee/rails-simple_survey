@@ -1,0 +1,33 @@
+counter: <%= session[:counter] %>
+
+<table>
+	<thead>
+		<tr>
+			<td>
+				<h1>Submitted information</h1>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name: </td>
+			<td><%=@values['name']%></td>
+		</tr>
+		<tr>
+			<td>Dojo Location: </td>
+			<td><%=@values['location']%></td>
+		</tr>
+		<tr>
+			<td>Favorite Language: </td>
+			<td><%=@values['language']%></td>
+		</tr>
+		<tr>
+			<td>Comment: </td>
+			<td><%=@values['comment']%></td>
+		</tr>
+	</tbody>
+</table>
+<form action="/surveys/index" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="submit" value="go back">
+</form>
